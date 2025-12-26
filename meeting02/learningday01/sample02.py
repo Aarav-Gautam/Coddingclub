@@ -8,7 +8,7 @@ with sr.Microphone() as source:
     print("Speak")
     print("User:", end="")
     time.sleep(1) 
-    audio_text = r.listen(source, timeout=None, phrase_time_limit=11)
+    audio_text = r.listen(source, timeout=None, )#phrase_time_limit=11
     print("Listening finished")
 
     try:
@@ -20,7 +20,7 @@ userprompt=r.recognize_google(audio_text)
 
 openai_client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key="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",
+  api_key="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",
 )
 
 completion = openai_client.chat.completions.create(
@@ -45,5 +45,5 @@ def speak(word=completion.choices[0].message.content):
 
     engine.say(word)
     engine.runAndWait()
-print(f"AI: {completion.choices[0].message.content}")
 speak()
+print(f"AI: {completion.choices[0].message.content}")
