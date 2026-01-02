@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Paste - {{ paste_id }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>PyPaste</h1>
+                <a href="{{ url_for('view_paste', paste_id=paste_id) }}" class="btn-secondary">Cancel</a>
+            </div>
+            <p>Editing Paste: <code>{{ paste_id }}</code></p>
+        </header>
+
+        <main>
+            <form action="{{ url_for('update_paste', paste_id=paste_id) }}" method="POST">
+                <textarea name="content" placeholder="Paste your code or text here..." required
+                    autofocus>{{ content }}</textarea>
+                <div class="actions">
+                    <button type="submit" class="btn-primary">Update Paste</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>Built with Flask & Python File I/O</p>
+        </footer>
+    </div>
+</body>
+
+</html>

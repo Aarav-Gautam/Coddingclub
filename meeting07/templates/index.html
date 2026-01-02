@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyPaste - Simple Python Pastebin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>PyPaste</h1>
+            <p>Create and share pastes instantly. No account, no trackers.</p>
+        </header>
+
+        <main>
+            <form action="{{ url_for('create') }}" method="POST">
+                <textarea name="content" placeholder="Paste your code or text here..." required autofocus></textarea>
+                <div class="actions">
+                    <button type="submit" class="btn-primary">Create Paste</button>
+                </div>
+            </form>
+
+            {% if pastes %}
+            <section class="recent-pastes">
+                <h2>Recent Pastes</h2>
+                <div class="paste-list">
+                    {% for p_id in pastes %}
+                    <a href="{{ url_for('view_paste', paste_id=p_id) }}" class="paste-item">
+                        <span class="id">#{{ p_id }}</span>
+                        <span class="action">View &rarr;</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+        </main>
+
+        <footer>
+            <p>Built with Flask & Python File I/O</p>
+        </footer>
+    </div>
+</body>
+
+</html>
