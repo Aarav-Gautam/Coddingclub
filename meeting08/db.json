@@ -1,0 +1,103 @@
+{
+  "warnings": {
+    "1301515644960772177": [
+      {
+        "reason": "<@1301515644960772177>  In",
+        "timestamp": "2026-01-09T14:36:37.882Z",
+        "moderator": "gautamaarav"
+      },
+      {
+        "reason": "<@1301515644960772177>",
+        "timestamp": "2026-01-09T14:37:08.933Z",
+        "moderator": "gautamaarav"
+      }
+    ]
+  },
+  "logs": [
+    {
+      "type": "warn",
+      "timestamp": "2026-01-09T14:36:37.882Z",
+      "userId": "1301515644960772177",
+      "moderator": "gautamaarav",
+      "action": "Warned",
+      "reason": "<@1301515644960772177>  In"
+    },
+    {
+      "type": "warn",
+      "timestamp": "2026-01-09T14:37:08.936Z",
+      "userId": "1301515644960772177",
+      "moderator": "gautamaarav",
+      "action": "Warned",
+      "reason": "<@1301515644960772177>"
+    },
+    {
+      "type": "mute",
+      "timestamp": "2026-01-09T14:45:00.909Z",
+      "userId": "1301515644960772177",
+      "moderator": "1438860220054114436",
+      "action": "Muted for 1 minute(s)",
+      "reason": "No reason provided"
+    },
+    {
+      "type": "mute",
+      "timestamp": "2026-01-09T14:46:12.546Z",
+      "userId": "1301515644960772177",
+      "moderator": "1408148630681948262",
+      "action": "Muted for 1 minute(s)",
+      "reason": "No reason provided"
+    },
+    {
+      "type": "mute",
+      "timestamp": "2026-01-09T14:47:44.976Z",
+      "userId": "1301515644960772177",
+      "moderator": "1408148630681948262",
+      "action": "Muted for 1 minute(s)",
+      "reason": "No reason provided"
+    },
+    {
+      "type": "mute",
+      "timestamp": "2026-01-09T14:48:54.040Z",
+      "userId": "1301515644960772177",
+      "moderator": "1408148630681948262",
+      "action": "Muted for 1 minute(s)",
+      "reason": "No reason provided"
+    },
+    {
+      "type": "unmute",
+      "timestamp": "2026-01-09T14:52:43.654Z",
+      "userId": "1301515644960772177",
+      "moderator": "gautamaarav",
+      "action": "Unmuted",
+      "reason": ""
+    },
+    {
+      "type": "ban",
+      "timestamp": "2026-01-09T14:53:40.525Z",
+      "userId": "1408148630681948262",
+      "moderator": "gautamaarav",
+      "action": "Banned",
+      "reason": "<@1408148630681948262>"
+    }
+  ],
+  "customCommands": {},
+  "rateLimits": {
+    "1438860220054114436": {
+      "count": 8,
+      "firstUsed": 1767967816070
+    },
+    "1408148630681948262": {
+      "count": 5,
+      "firstUsed": 1767967859390
+    }
+  },
+  "config": {
+    "restrictedChannels": [],
+    "blacklistedWords": [
+      "badword1",
+      "badword2"
+    ],
+    "announcementChannel": null,
+    "logChannel": null,
+    "aiRateLimit": 5
+  }
+}
